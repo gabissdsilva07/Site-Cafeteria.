@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="menu-principal">
+        <div class="menu-esquerda">
+            <div class="logo">☕ Studio Café</div>
+            <nav class="links-navegacao">
+                <a href="#cardapio">Cardápio</a>
+                <a href="#sobre">Sobre Nós</a>
+            </nav>
+        </div>
+
+        <div class="menu-direita">
+            <a href="#localizacao" class="link-localizacao">
+                <span class="icone-pino">📍</span> Encontre uma Loja
+            </a>
+        </div>
+    </header>
+
+    <!-- ===================== SLIDER DE PROMOÇÕES ===================== -->
+    <section class="slider-section">
+        <div class="slider-wrapper">
+
+            <!-- Slide 1 — imagem principal do seu site -->
+            <div class="slide active">
+                <img src="como-abrir-empresa-cafeteria.jpg" alt="Studio Café — Promoção" class="slide-img">
+                <div class="slide-overlay">
+                    <span class="slide-tag">Destaque</span>
+                    <h2 class="slide-titulo">Café de Verdade</h2>
+                    <p class="slide-subtitulo">Cremoso, especial e feito pra você.</p>
+                    <a href="#cardapio" class="slide-btn">Ver Cardápio</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="043352ab29846c727182162f6b1c.jpg" alt="Cappucino" class="slide-img">
+                <div class="placeholder-inner">
+                    <span class="placeholder-icon">🧊</span>
+                    <p>Sua segunda promoção aqui</p>
+                </div>
+            </div>
+            <div class="slide-overlay">
+                <span class="slide-tag">Novidade</span>
+                <h2 class="slide-titulo">Cappucino Quentinho</h2>
+                <p class="slide-subtitulo">A studio café tem sua variedade!</p>
+                <a href="#cardapio" class="slide-btn">Ver Cardápio</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="milk shake.jpg" alt="milk shake" class="slide-img">
+            <div class="placeholder-inner">
+                <span class="placeholder-icon">☕</span>
+                <p>Sua terceira promoção aqui</p>
+            </div>
+        </div>
+        <div class="slide-overlay">
+            <span class="slide-tag">Promoção</span>
+            <h2 class="slide-titulo">Para alegrar seus filhos!</h2>
+            <p class="slide-subtitulo"> Os três sabores mais favoritos</p>
+            <a href="#cardapio" class="slide-btn">Explorar</a>
+        </div>
+        </div>
+
+        </div><!-- /.slider-wrapper -->
+
+        <!-- Botões de navegação -->
+        <button class="slider-nav slider-nav--prev" aria-label="Slide anterior">&#8249;</button>
+        <button class="slider-nav slider-nav--next" aria-label="Próximo slide">&#8250;</button>
+
+        <!-- Dots indicadores -->
+        <div class="slider-dots">
+            <button class="dot active" data-index="0" aria-label="Ir para slide 1"></button>
+            <button class="dot" data-index="1" aria-label="Ir para slide 2"></button>
+            <button class="dot" data-index="2" aria-label="Ir para slide 3"></button>
+        </div>
+
+    </section>
+    <!-- =================== FIM SLIDER =================== -->
+
+    <div class="cartao-conteudo">
+        <h1>Studio Café</h1>
+        <p>O Studio café foi criado para empresários ou simples trabalhadores tomarem um café digno depois de horas de
+            trabalho, um local simples mas aconchegante, com cafés com altas variedades, tanto fracos quanto fortes,
+            desça o site para saber mais sobre nós!</p>
+    </div>
+
+    <!-- ===================== BLOCOS EXTRAS ===================== -->
+    <!-- Bloco 2 — preencha com o próximo assunto -->
+    <div class="cartao-conteudo">
+        <h1>Título do Bloco 2</h1>
+        <p>Adicione aqui o texto do segundo bloco — pode ser sobre o cardápio, horários, promoções, etc.</p>
+    </div>
+
+    <!-- Bloco 3 — preencha com o próximo assunto -->
+    <div class="cartao-conteudo">
+        <h1>Título do Bloco 3</h1>
+        <p>Adicione aqui o texto do terceiro bloco — pode ser sobre a história da cafeteria, equipe, valores, etc.</p>
+    </div>
+
+    <!-- Bloco 4 — preencha com o próximo assunto -->
+    <div class="cartao-conteudo">
+        <h1>Título do Bloco 4</h1>
+        <p>Adicione aqui o texto do quarto bloco — pode ser contato, localização, redes sociais, etc.</p>
+    </div>
+    <!-- ================== FIM BLOCOS EXTRAS ================== -->
+
+</body>
+
+<!-- ===================== SCRIPT DO SLIDER ===================== -->
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+    let timer;
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAuto() {
+        clearInterval(timer);
+        timer = setInterval(next, 5000);
+    }
+
+    document.querySelector('.slider-nav--next').addEventListener('click', () => { next(); startAuto(); });
+    document.querySelector('.slider-nav--prev').addEventListener('click', () => { prev(); startAuto(); });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            goTo(parseInt(dot.dataset.index));
+            startAuto();
+        });
+    });
+
+    startAuto();
+</script>
+
+</html>
