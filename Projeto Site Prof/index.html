@@ -1,155 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Café</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <!-- ===== MENU ===== -->
     <header class="menu-principal">
         <div class="menu-esquerda">
-            <div class="logo">☕ Studio Café</div>
+            <a href="index.html" class="logo">☕ Studio Café</a>
             <nav class="links-navegacao">
-                <a href="#cardapio">Cardápio</a>
-                <a href="#sobre">Sobre Nós</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="sobre.html">Sobre Nós</a>
             </nav>
         </div>
-
         <div class="menu-direita">
-            <a href="#localizacao" class="link-localizacao">
-                <span class="icone-pino">📍</span> Encontre uma Loja
+            <a href="lojas.html" class="link-localizacao">
+                <span>📍</span> Encontre uma Loja
             </a>
         </div>
     </header>
 
-    <!-- ===================== SLIDER DE PROMOÇÕES ===================== -->
+    <!-- ===== SLIDER ===== -->
     <section class="slider-section">
         <div class="slider-wrapper">
-
-            <!-- Slide 1 — imagem principal do seu site -->
             <div class="slide active">
-                <img src="como-abrir-empresa-cafeteria.jpg" alt="Studio Café — Promoção" class="slide-img">
+                <img src="como-abrir-empresa-cafeteria.jpg" alt="Studio Café" class="slide-img">
                 <div class="slide-overlay">
                     <span class="slide-tag">Destaque</span>
                     <h2 class="slide-titulo">Café de Verdade</h2>
                     <p class="slide-subtitulo">Cremoso, especial e feito pra você.</p>
-                    <a href="#cardapio" class="slide-btn">Ver Cardápio</a>
+                    <a href="cardapio.html" class="slide-btn">Ver Cardápio</a>
                 </div>
             </div>
-
             <div class="slide">
                 <img src="043352ab29846c727182162f6b1c.jpg" alt="Cappucino" class="slide-img">
-                <div class="placeholder-inner">
-                    <span class="placeholder-icon">🧊</span>
-                    <p>Sua segunda promoção aqui</p>
+                <div class="slide-overlay">
+                    <span class="slide-tag">Novidade</span>
+                    <h2 class="slide-titulo">Cappucino Quentinho</h2>
+                    <p class="slide-subtitulo">A Studio Café tem sua variedade!</p>
+                    <a href="cardapio.html" class="slide-btn">Ver Cardápio</a>
                 </div>
             </div>
-            <div class="slide-overlay">
-                <span class="slide-tag">Novidade</span>
-                <h2 class="slide-titulo">Cappucino Quentinho</h2>
-                <p class="slide-subtitulo">A studio café tem sua variedade!</p>
-                <a href="#cardapio" class="slide-btn">Ver Cardápio</a>
+            <div class="slide">
+                <img src="milk shake.jpg" alt="Milk Shake" class="slide-img">
+                <div class="slide-overlay">
+                    <span class="slide-tag">Promoção</span>
+                    <h2 class="slide-titulo">Para Alegrar Seus Filhos!</h2>
+                    <p class="slide-subtitulo">Os três sabores mais favoritos.</p>
+                    <a href="cardapio.html" class="slide-btn">Explorar</a>
+                </div>
             </div>
         </div>
-
-        <div class="slide">
-            <img src="milk shake.jpg" alt="milk shake" class="slide-img">
-            <div class="placeholder-inner">
-                <span class="placeholder-icon">☕</span>
-                <p>Sua terceira promoção aqui</p>
-            </div>
-        </div>
-        <div class="slide-overlay">
-            <span class="slide-tag">Promoção</span>
-            <h2 class="slide-titulo">Para alegrar seus filhos!</h2>
-            <p class="slide-subtitulo"> Os três sabores mais favoritos</p>
-            <a href="#cardapio" class="slide-btn">Explorar</a>
-        </div>
-        </div>
-
-        </div><!-- /.slider-wrapper -->
-
-        <!-- Botões de navegação -->
-        <button class="slider-nav slider-nav--prev" aria-label="Slide anterior">&#8249;</button>
-        <button class="slider-nav slider-nav--next" aria-label="Próximo slide">&#8250;</button>
-
-        <!-- Dots indicadores -->
+        <button class="slider-nav slider-nav--prev">&#8249;</button>
+        <button class="slider-nav slider-nav--next">&#8250;</button>
         <div class="slider-dots">
-            <button class="dot active" data-index="0" aria-label="Ir para slide 1"></button>
-            <button class="dot" data-index="1" aria-label="Ir para slide 2"></button>
-            <button class="dot" data-index="2" aria-label="Ir para slide 3"></button>
+            <button class="dot active" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
         </div>
-
     </section>
-    <!-- =================== FIM SLIDER =================== -->
 
-    <div class="cartao-conteudo">
-        <h1>Studio Café</h1>
-        <p>O Studio café foi criado para empresários ou simples trabalhadores tomarem um café digno depois de horas de
-            trabalho, um local simples mas aconchegante, com cafés com altas variedades, tanto fracos quanto fortes,
-            desça o site para saber mais sobre nós!</p>
-    </div>
+    <!-- ===== CARDS DE NAVEGAÇÃO (estilo Starbucks) ===== -->
+    <section class="nav-cards">
+        <a href="cardapio.html" class="nav-card">
+            <!-- ESPAÇO PARA IMAGEM: coloque uma foto do cardápio aqui -->
+            <div class="nav-card-img nav-card-img--placeholder">
+                <span>☕</span>
+            </div>
+            <div class="nav-card-info">
+                <h3>Cardápio</h3>
+                <p>Conheça todos os nossos cafés, bebidas e opções especiais.</p>
+                <span class="nav-card-btn">Ver Cardápio →</span>
+            </div>
+        </a>
+        <a href="sobre.html" class="nav-card">
+            <!-- ESPAÇO PARA IMAGEM: coloque uma foto do ambiente ou equipe -->
+            <div class="nav-card-img nav-card-img--placeholder nav-card-img--2">
+                <span>🏠</span>
+            </div>
+            <div class="nav-card-info">
+                <h3>Sobre Nós</h3>
+                <p>Saiba nossa história, nossos valores e nossa paixão pelo café.</p>
+                <span class="nav-card-btn">Conheça a Gente →</span>
+            </div>
+        </a>
+        <a href="lojas.html" class="nav-card">
+            <!-- ESPAÇO PARA IMAGEM: coloque uma foto da fachada da loja -->
+            <div class="nav-card-img nav-card-img--placeholder nav-card-img--3">
+                <span>📍</span>
+            </div>
+            <div class="nav-card-info">
+                <h3>Nossas Lojas</h3>
+                <p>Encontre a unidade mais perto de você e venha nos visitar.</p>
+                <span class="nav-card-btn">Ver Lojas →</span>
+            </div>
+        </a>
+    </section>
 
-    <!-- ===================== BLOCOS EXTRAS ===================== -->
-    <!-- Bloco 2 — preencha com o próximo assunto -->
-    <div class="cartao-conteudo">
-        <h1>Título do Bloco 2</h1>
-        <p>Adicione aqui o texto do segundo bloco — pode ser sobre o cardápio, horários, promoções, etc.</p>
-    </div>
+    <!-- ===== BANNER DESTAQUE ===== -->
+    <section class="banner-destaque">
+        <!-- ESPAÇO PARA IMAGEM: imagem panorâmica do café ou ambiente -->
+        <div class="banner-destaque-img">
+            <img src="como-abrir-empresa-cafeteria.jpg" alt="Studio Café ambiente">
+        </div>
+        <div class="banner-destaque-texto">
+            <span class="slide-tag">Nossa Missão</span>
+            <h2>Mais do que café,<br>uma experiência.</h2>
+            <p>Um lugar feito para você pausar, respirar e saborear o melhor.</p>
+            <a href="sobre.html" class="slide-btn">Saiba Mais</a>
+        </div>
+    </section>
 
-    <!-- Bloco 3 — preencha com o próximo assunto -->
-    <div class="cartao-conteudo">
-        <h1>Título do Bloco 3</h1>
-        <p>Adicione aqui o texto do terceiro bloco — pode ser sobre a história da cafeteria, equipe, valores, etc.</p>
-    </div>
-
-    <!-- Bloco 4 — preencha com o próximo assunto -->
-    <div class="cartao-conteudo">
-        <h1>Título do Bloco 4</h1>
-        <p>Adicione aqui o texto do quarto bloco — pode ser contato, localização, redes sociais, etc.</p>
-    </div>
-    <!-- ================== FIM BLOCOS EXTRAS ================== -->
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-coluna">
+                <h4>☕ Studio Café</h4>
+                <p>Seu refúgio de sabor e aconchego.</p>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="lojas.html">Nossas Lojas</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Horários</h4>
+                <p>Seg – Sex: 07h às 20h</p>
+                <p>Sáb – Dom: 08h às 18h</p>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Contato</h4>
+                <p>📞 (45) 99999-9999</p>
+                <p>📧 studio@cafe.com.br</p>
+            </div>
+        </div>
+        <div class="rodape-base">
+            <p>© 2025 Studio Café — Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
-
-<!-- ===================== SCRIPT DO SLIDER ===================== -->
 <script>
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
-    let current = 0;
-    let timer;
-
-    function goTo(index) {
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('active');
-        current = (index + slides.length) % slides.length;
-        slides[current].classList.add('active');
-        dots[current].classList.add('active');
+    let current = 0, timer;
+    function goTo(i) {
+        slides[current].classList.remove('active'); dots[current].classList.remove('active');
+        current = (i + slides.length) % slides.length;
+        slides[current].classList.add('active'); dots[current].classList.add('active');
     }
-
     function next() { goTo(current + 1); }
     function prev() { goTo(current - 1); }
-
-    function startAuto() {
-        clearInterval(timer);
-        timer = setInterval(next, 5000);
-    }
-
+    function startAuto() { clearInterval(timer); timer = setInterval(next, 5000); }
     document.querySelector('.slider-nav--next').addEventListener('click', () => { next(); startAuto(); });
     document.querySelector('.slider-nav--prev').addEventListener('click', () => { prev(); startAuto(); });
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            goTo(parseInt(dot.dataset.index));
-            startAuto();
-        });
-    });
-
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); startAuto(); }));
     startAuto();
 </script>
-
 </html>
